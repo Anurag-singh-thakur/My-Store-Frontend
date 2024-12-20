@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Upload, Trash2 } from 'lucide-react';
-import usePreviewImg from '../hooks/usePrevImg';
+import usePreviewImg from '../hooks/usePrevImg.jsx';
 
 function ProductCard() {
   const [productDetails, setProductDetails] = useState({

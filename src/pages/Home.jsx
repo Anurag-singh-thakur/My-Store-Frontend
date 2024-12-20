@@ -1,9 +1,8 @@
 import React from 'react';
-import ProductGrid from '../component/ProductGrid';
-import Testimonials from '../component/Testimonials';
-import Footer from "../component/Footer"
-import Categories from '../component/Cateories';
-import Hero from "../component/Hero"
+import ProductGrid from '../component/ProductGrid.jsx';
+import Testimonials from '../component/Testimonials.jsx';
+import Categories from '../component/Cateories.jsx';
+import Hero from "../component/Hero.jsx"
 
 export default function Home() {
   return (

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { AiFillCaretUp, AiOutlineShoppingCart, AiOutlineClose, AiOutlineMessage } from "react-icons/ai";
+import { AiOutlineShoppingCart, AiOutlineClose } from "react-icons/ai";
 import { useRecoilState } from 'recoil';
-import cartAtom from '../Atom/cartAtom';
+import cartAtom from '../Atom/cartAtom.js';
 
 function Cart() {
   const [showIcons, setShowIcons] = useState(false);

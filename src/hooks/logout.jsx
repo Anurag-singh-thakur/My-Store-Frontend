@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import userAtom from '../Atom/userAtom';
-import useShowToast from './showToast';
+import userAtom from '../Atom/userAtom.js';
+import useShowToast from './showToast.jsx';
 
 function uselogout() {
    const [user,setuser] = useState(userAtom);

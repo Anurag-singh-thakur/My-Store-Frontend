@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { User, Mail, Phone, MapPin } from 'lucide-react';
 import { useRecoilValue } from 'recoil';
-import userAtom from '../Atom/userAtom';
+import userAtom from '../Atom/userAtom.js';
 
 const Dashboard = () => {
   const user = useRecoilValue(userAtom);

@@ -3,7 +3,7 @@
 import React, { useState } from 'react'
 import { Eye, EyeOff } from 'lucide-react'
 import { useSetRecoilState } from 'recoil'
-import userAtom from '../Atom/userAtom'
+import userAtom from '../Atom/userAtom.js'
 import { useNavigate } from 'react-router-dom'
 
 

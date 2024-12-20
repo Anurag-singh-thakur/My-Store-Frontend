@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import ProductPage from './pages/Product';
 import {  useRecoilValue } from 'recoil';
 import SigninCard from './pages/Signin';
-import userAtom from './Atom/userAtom';
+import userAtom from './Atom/userAtom.js';
 import SignupCard from './pages/Signup';
 import ProductCard from './component/ProductCard';
 import Dashboard from './pages/Profile';

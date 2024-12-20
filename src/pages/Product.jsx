@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useParams } from 'react-router-dom';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import LoadingPage from '../component/Loading';
-import ProductGrid from '../component/ProductGrid';
+import LoadingPage from '../component/Loading.jsx';
+import ProductGrid from '../component/ProductGrid.jsx';
 import useShowToast from '../hooks/showToast';
 import { useRecoilState } from 'recoil';
-import cartAtom from '../Atom/cartAtom';
+import cartAtom from '../Atom/cartAtom.js';
 
 export default function ProductPage() {
   const [product, setProduct] = useState(null);
