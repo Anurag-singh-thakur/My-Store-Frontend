@@ -14,7 +14,13 @@ const Dashboard = () => {
     const fetchCartItems = async () => {
       setLoading(true);
       try {
-        const res = await fetch('/api/p/cart');
+        const res = await fetch('https://my-store-backend-6c9k.onrender.com/api/p/cart', {
+          method: "GET",
+          headers: {
+              "Content-Type": "application/json",  
+          },
+          credentials: "include", 
+      });
         const data = await res.json();
         setCartData(data);
       } catch (error) {
@@ -33,7 +39,13 @@ const Dashboard = () => {
         try {
           const details = await Promise.all(
             cartData.items.map(async (item) => {
-              const res = await fetch(`/api/p/product/${item.product}`);
+              const res = await fetch(`https://my-store-backend-6c9k.onrender.com/api/p/product/${item.product}`, {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json",  
+                },
+                credentials: "include", 
+            });
               const productData = await res.json();
               return { ...item, ...productData };
             })

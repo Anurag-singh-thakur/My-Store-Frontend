@@ -13,11 +13,12 @@ export default function SigninCard() {
   const navigate = useNavigate(); 
   const handleSignin = async () => {
     try {
-      const res = await fetch("/api/user/Signin", {
+      const res = await fetch("https://my-store-backend-6c9k.onrender.com/api/user/Signin", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
         },
+        credentials:"include",
         body: JSON.stringify(inputs),
       });
       const data = await res.json();

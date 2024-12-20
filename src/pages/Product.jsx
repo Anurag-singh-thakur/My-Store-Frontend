@@ -22,7 +22,13 @@ export default function ProductPage() {
 
     const getProduct = async () => {
       try {
-        const res = await fetch(`/api/p/product/${id}`);
+        const res = await fetch(`https://my-store-backend-6c9k.onrender.com/api/p/product/${id}`, {
+          method: "GET",
+          headers: {
+              "Content-Type": "application/json",  
+          },
+          credentials: "include", 
+      });
         const data = await res.json();
         console.log('Fetched Product Data:', data);
         setProduct(data);
@@ -43,11 +49,12 @@ export default function ProductPage() {
         return;
       }
 
-      const res = await fetch(`/api/p/product/${product._id}/cart`, {
+      const res = await fetch(`https://my-store-backend-6c9k.onrender.com/api/p/product/${product._id}/cart`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
+        credentials:'include',
         body: JSON.stringify({ quantity }),
       });
 
