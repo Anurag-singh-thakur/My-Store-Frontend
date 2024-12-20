@@ -5,11 +5,13 @@ import { Eye, EyeOff } from 'lucide-react'
 import { useSetRecoilState } from 'recoil'
 import userAtom from '../Atom/userAtom.js'
 import { useNavigate } from 'react-router-dom'
+import useShowToast from '../hooks/showToast.jsx';
 
 export default function SignupCard() {
   const [showPassword, setShowPassword] = useState(false)
   const setUser = useSetRecoilState(userAtom)
   const navigate = useNavigate()
+  const showtoast = useShowToast();
   const [inputs, setInputs] = useState({
     name: '',
     lname: '',
@@ -34,7 +36,7 @@ export default function SignupCard() {
       })
       const data = await res.json()
       if (data.err) {
-        toast('Error', data.err, 'error')
+        showtoast('Error', data.err, 'error')
         return
       }
       localStorage.setItem('user', JSON.stringify(data))
@@ -42,7 +44,7 @@ export default function SignupCard() {
       window.location.reload()
     } catch (error) {
       console.error(error)
-      toast('Error', 'An error occurred', 'error')
+      showtoast('Error', 'An error occurred', 'error')
     }
   }
 
