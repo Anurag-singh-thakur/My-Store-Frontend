@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
-import productAtom from '../Atom/ProductAtom';
-import Loading from "../component/Loading";
+import productAtom from '../Atom/ProductAtom.js';
+import Loading from "../component/Loading.jsx";
 
 export default function ProductGrid() {
   const [products, setProducts] = useRecoilState(productAtom);
