@@ -31,7 +31,7 @@ export default function SigninCard() {
       window.location.reload()
     } catch (error) {
       console.error(error);
-      toast("Error",data.err,"error");  
+      toast("Error",error,"error");  
 
     }
   };
