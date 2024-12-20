@@ -8,7 +8,7 @@ export default defineConfig({
     port: 3000,
     proxy: {
       "/api": {
-        target: 'https://my-store-backend-opal.vercel.app/',
+        target: 'https://my-store-backend-6c9k.onrender.com',
         changeOrigin: true,
         secure: false
       }
