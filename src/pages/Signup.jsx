@@ -27,7 +27,7 @@ export default function SignupCard() {
 
   const handleSignup = async () => {
     try {
-      const res = await fetch('https://my-store-backend-6c9k.onrender.com/api/user/signup', {
+      const res = await fetch('https://my-store-backend-delta.vercel.app/api/user/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
