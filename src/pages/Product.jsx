@@ -22,7 +22,7 @@ export default function ProductPage() {
 
     const getProduct = async () => {
       try {
-        const res = await fetch(`https://my-store-backend-6c9k.onrender.com/api/p/product/${id}`, {
+        const res = await fetch(`https://my-store-backend-delta.vercel.app//api/p/product/${id}`, {
           method: "GET",
           headers: {
               "Content-Type": "application/json",  
