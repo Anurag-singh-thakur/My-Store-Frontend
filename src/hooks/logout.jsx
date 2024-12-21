@@ -7,7 +7,7 @@ function uselogout() {
    const showToast = useShowToast();
    const logout = async() => {
     try {
-        const res = await fetch('https://my-store-backend-6c9k.onrender.com/api/user/logout', {
+        const res = await fetch('https://my-store-backend-delta.vercel.app/api/user/logout', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
