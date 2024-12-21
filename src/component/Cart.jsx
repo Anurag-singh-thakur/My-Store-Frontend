@@ -15,7 +15,7 @@ function Cart() {
     const getCartItem = async () => {
       setLoading(true);
       try {
-        const res = await fetch('https://my-store-backend-6c9k.onrender.com/api/p/cart', {
+        const res = await fetch('https://my-store-backend-delta.vercel.app/api/p/cart', {
           method: "GET",
           headers: {
               "Content-Type": "application/json",  
@@ -39,7 +39,7 @@ function Cart() {
         try {
           const details = await Promise.all(
             cartData.items.map(async (item) => {
-              const res = await fetch(`https://my-store-backend-6c9k.onrender.com/api/p/product/${item.product}`, {
+              const res = await fetch(`https://my-store-backend-delta.vercel.app/api/p/product/${item.product}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",  
@@ -85,7 +85,7 @@ function Cart() {
 
     const deleteP = async () => {
       try {
-        await fetch(`https://my-store-backend-6c9k.onrender.com/api/p/${productId}`, {
+        await fetch(`https://my-store-backend-delta.vercel.app/api/p/${productId}`, {
           method: "PUT",
           headers: {
               "Content-Type": "application/json",  
