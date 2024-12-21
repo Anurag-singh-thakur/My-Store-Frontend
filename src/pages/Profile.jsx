@@ -14,7 +14,7 @@ const Dashboard = () => {
     const fetchCartItems = async () => {
       setLoading(true);
       try {
-        const res = await fetch('https://my-store-backend-6c9k.onrender.com/api/p/cart', {
+        const res = await fetch('https://my-store-backend-delta.vercel.app/api/p/cart', {
           method: "GET",
           headers: {
               "Content-Type": "application/json",  
@@ -39,7 +39,7 @@ const Dashboard = () => {
         try {
           const details = await Promise.all(
             cartData.items.map(async (item) => {
-              const res = await fetch(`https://my-store-backend-6c9k.onrender.com/api/p/product/${item.product}`, {
+              const res = await fetch(`https://my-store-backend-delta.vercel.app/api/p/product/${item.product}`, {
                 method: "GET",
                 headers: {
                     "Content-Type": "application/json",  
