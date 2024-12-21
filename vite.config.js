@@ -6,12 +6,12 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
-    // proxy: {
-    //   "/api": {
-    //     target: 'https://my-store-backend-6c9k.onrender.com',
-    //     changeOrigin: true,
-    //     secure: false
-    //   }
-    // }
+    proxy: {
+      "/api": {
+        target: 'https://my-store-backend-delta.vercel.app/',
+        changeOrigin: true,
+        secure: false
+      }
+    }
   }
 })
