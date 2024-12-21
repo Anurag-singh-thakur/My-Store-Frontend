@@ -13,7 +13,7 @@ export default function SigninCard() {
   const navigate = useNavigate(); 
   const handleSignin = async () => {
     try {
-      const res = await fetch("https://my-store-backend-6c9k.onrender.com/api/user/Signin", {
+      const res = await fetch("https://my-store-backend-delta.vercel.app/api/user/Signin", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'
