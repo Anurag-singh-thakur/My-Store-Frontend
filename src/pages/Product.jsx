@@ -49,7 +49,7 @@ export default function ProductPage() {
         return;
       }
 
-      const res = await fetch(`https://my-store-backend-6c9k.onrender.com/api/p/product/${product._id}/cart`, {
+      const res = await fetch(`https://my-store-backend-delta.vercel.app/api/p/product/${product._id}/cart`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
