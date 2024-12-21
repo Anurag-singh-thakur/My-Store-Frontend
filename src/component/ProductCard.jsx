@@ -43,7 +43,7 @@ function ProductCard() {
     setLoading(true);
     console.log('Product details:', productDetails, 'Images:', imgUrls);
     try {
-      const res = await fetch('https://my-store-backend-6c9k.onrender.com/api/p/product', {
+      const res = await fetch('https://my-store-backend-delta.vercel.app/api/p/product', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
