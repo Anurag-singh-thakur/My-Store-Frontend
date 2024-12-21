@@ -11,7 +11,7 @@ export default function ProductGrid() {
   useEffect(() => {
     const loadProducts = async () => {
       try {
-        const res = await fetch('https://my-store-backend-6c9k.onrender.com/api/p/product', {
+        const res = await fetch('https://my-store-backend-delta.vercel.app/api/p/product', {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
